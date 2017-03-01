@@ -1,0 +1,22 @@
+ &system
+    ibrav = 0
+    ntyp = 2
+    nat =  8
+ /
+ATOMIC_SPECIES
+ Mg  24.305  Mg.pbe-nsp-bpaw.UPF
+ O   15.999  O.pbe-kjpaw.UPF
+ATOMIC_POSITIONS crystal
+ Mg 0.00 0.00 0.00
+ Mg 0.50 0.50 0.00
+ Mg 0.00 0.50 0.50
+ Mg 0.50 0.00 0.50
+ O  0.50 0.00 0.00
+ O  0.00 0.50 0.00
+ O  0.00 0.00 0.50
+ O  0.50 0.50 0.50
+CELL_PARAMETERS angstrom
+4.292434060           0           0
+          0 4.292434060           0
+          0           0 4.292434060 
+

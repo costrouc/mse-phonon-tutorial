@@ -1,0 +1,18 @@
+#$ -N mgo-relaxation
+#$ -q short*
+#$ -l h_rt=00:30:00
+#$ -pe openmpi* 16
+#$ -o "submit.sge.out"
+#$ -e "submit.sge.err"
+#$ -cwd
+#$ -S /bin/bash
+#$ -t 1-2
+
+# Generate task id with 0 spacing
+TASK_ID=`printf "%03d" $SGE_TASK_ID`
+
+# Replace output directory so that unique
+sed -i "s/\.\/output\//\.\/output-$TASK_ID\//g" static-$TASK_ID.in
+
+module load espresso/5.1.1
+mpirun -n 16 pw.x < static-$TASK_ID.in > static-$TASK_ID.out
