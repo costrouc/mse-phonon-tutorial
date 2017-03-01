@@ -1,6 +1,6 @@
 #$ -N mgo-relaxation
 #$ -q short*
-#$ -l h_rt=00:10:00
+#$ -l h_rt=00:30:00
 #$ -pe openmpi* 2
 #$ -o "submit.sge.out"
 #$ -e "submit.sge.err"
