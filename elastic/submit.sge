@@ -1,0 +1,12 @@
+#$ -N mgo-relaxation
+#$ -q short*
+#$ -l h_rt=00:30:00
+#$ -pe openmpi* 4
+#$ -o "submit.sge.out"
+#$ -e "submit.sge.err"
+#$ -cwd
+#$ -S /bin/bash
+#$ -t 1-24
+
+module load espresso/5.1.1
+mpirun -n 4 pw.x < relax-$SGE_TASK_ID.in > relax-$SGE_TASK_ID.out
