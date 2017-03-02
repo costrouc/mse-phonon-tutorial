@@ -1,0 +1,41 @@
+
+&control
+    calculation = 'relax'
+    pseudo_dir = '../pseudo/'
+    outdir = './output-11/'
+    forc_conv_thr = 1.d-7
+    tprnfor = .true.
+    tstress = .true.
+ /
+ &system
+    ibrav = 0
+    nat = 8
+    ntyp = 2
+    ecutwfc = 70.0
+ /
+ &electrons
+    diagonalization='david'
+    conv_thr = 1.d-9
+ /
+ &ions
+    ion_dynamics = 'bfgs'
+ /
+ATOMIC_SPECIES
+ Mg   24.30500   Mg.pbe-nsp-bpaw.UPF
+  O   15.99940   O.pbe-kjpaw.UPF
+K_POINTS automatic
+ 6 6 6 1 1 1
+CELL_PARAMETERS angstrom
+ 4.29243406 0.00000000 0.00000000
+ 0.00000000 4.29243406 0.00000000
+ 0.00000000 0.00000000 4.31389623
+ATOMIC_POSITIONS crystal
+ Mg 0.00000000 0.00000000 0.00000000
+ Mg 0.00000000 0.50000000 0.50000000
+ Mg 0.50000000 0.00000000 0.50000000
+ Mg 0.50000000 0.50000000 0.00000000
+ O 0.50000000 0.50000000 0.50000000
+ O 0.50000000 0.00000000 0.00000000
+ O 0.00000000 0.50000000 0.00000000
+ O 0.00000000 0.00000000 0.50000000
+
